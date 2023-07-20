@@ -1,3 +1,7 @@
+# O yield é uma palavra reservada do Ruby
+# Ele habilita a leitura e execução de blocos
+# dentro das nossas funções de Ruby
+
 def normal_calculator(x, y, operator)
   case operator
   when "+"
@@ -16,6 +20,8 @@ end
 puts normal_calculator(2, 2, "+") # => 4
 puts normal_calculator(56, 8.0, "/") # => 7
 
+# No exemplo abaixo, quem define as operações de calculo no método `yield_calculator`
+# é o bloco que foi passado logo após a chamada da função.
 def yield_calculator(x, y)
   if block_given?
     yield(x, y)
